@@ -1,0 +1,11 @@
+.wrapper {
+	@apply bg-black text-white min-h-[240px];
+
+	& .logoWithRights {
+		@apply flex-center-center flex-col;
+
+		& .textRight {
+			@apply text-gray-3 text-s_body font-light;
+		}
+	}
+}

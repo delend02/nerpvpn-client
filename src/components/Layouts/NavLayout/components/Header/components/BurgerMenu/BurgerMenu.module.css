@@ -1,0 +1,5 @@
+.wrapper {
+	& .button {
+		@apply bg-black;
+	}
+}

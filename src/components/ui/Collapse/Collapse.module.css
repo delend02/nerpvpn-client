@@ -1,0 +1,29 @@
+.collapse {
+	@apply grid overflow-hidden transition-all shrink-0;
+	grid-template-rows: 0fr;
+
+	& .content {
+		@apply min-h-0 invisible transition-all opacity-5;
+	}
+
+	&.show {
+		grid-template-rows: 1fr;
+		& .content {
+			@apply visible opacity-100 p-px;
+		}
+	}
+
+	&.horizontal {
+		grid-template-rows: auto;
+		grid-template-columns: 0fr;
+
+		& .content {
+			@apply min-w-0;
+		}
+
+		&.show {
+			grid-template-rows: auto;
+			grid-template-columns: 1fr;
+		}
+	}
+}

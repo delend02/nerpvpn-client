@@ -1,0 +1,25 @@
+.link {
+	@apply cursor-pointer transition-all2 shrink-0;
+	color: currentColor;
+
+	&.white {
+		@apply text-white hover-hover:hover:text-gray-1 hover-none:active:text-gray-1;
+	}
+
+	&.dark {
+		@apply text-black hover-hover:hover:text-gray-3 hover-none:active:text-gray-3;
+	}
+
+	& *[disabled],
+	&.disabled {
+		@apply cursor-default pointer-events-none;
+
+		&.white {
+			@apply text-gray-2/50;
+		}
+
+		&.dark {
+			@apply text-gray-4/50;
+		}
+	}
+}

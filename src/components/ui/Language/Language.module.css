@@ -1,0 +1,11 @@
+.select {
+	@apply w-[150px];
+}
+
+.itemFlag {
+	@apply flex items-center gap-3;
+
+	& .icon {
+		@apply flex-center-center w-6 h-[16px];
+	}
+}
