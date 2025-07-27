@@ -1,16 +1,13 @@
 .wrapper {
-	@apply sticky top-3 z-50  rounded-[20px] mx-4 tb:mx-12 bg-white;
-	opacity: 0.999;
-}
+	@apply container sticky top-0 z-50;
 
-.header {
-	@apply py-4 container  text-black
-	flex-center-between relative transition-all2;
-	@apply overflow-hidden
-	max-h-[calc(var(--header-height-mb)-1px)]
-	tb:max-h-[calc(var(--header-height)-1px)];
+	& .header {
+		@apply flex-center-between rounded-3xl bg-white mt-3
+		px-5
+		h-[var(--header-height-mb)] tb:h-[var(--header-height)];
+	}
 
 	& .button {
-		@apply px-6 bg-blue-gradient rounded-full text-white;
+		@apply bg-blue-gradient text-white rounded-full text-s_body p-6;
 	}
 }

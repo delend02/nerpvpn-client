@@ -14,13 +14,14 @@ import { DeviceProvider, DeviceType } from '@/config/providers/device'
 
 import './globals.css'
 
-import { sfProDisplay } from '@/fonts/sf-pro'
+import { benzinBold, sfProDisplay } from '@/fonts'
 import { I18nProviderClient } from '@/locales/client'
 import { DEFAULT_LOCALE, LocaleType } from '@/locales/config'
 
 export const metadata: Metadata = {
 	title: 'Nerp VPN',
 	description: '',
+	keywords: ['nerp vpn', 'nerp vpn app', 'nerp vpn app download', 'nerp vpn download', 'vpn'],
 }
 
 export default async function RootLayout({
@@ -37,7 +38,7 @@ export default async function RootLayout({
 		<html
 			lang={locale}
 			dir={getCurrentDir(locale)}
-			className={clsx(sfProDisplay.variable, 'font-sf antialiased')}
+			className={clsx(sfProDisplay.variable, benzinBold.variable, 'font-sf_pro antialiased')}
 		>
 			<body>
 				<Suspense fallback={<Spinner center hFull />}>

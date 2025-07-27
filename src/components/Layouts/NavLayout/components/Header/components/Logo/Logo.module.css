@@ -1,3 +1,8 @@
 .wrapper {
 	@apply flex-center-center gap-3;
+
+	& .logo {
+		/* FIXME MAX */
+		/* на мобилках уменьши размер лого для шапки */
+	}
 }

@@ -120,8 +120,9 @@ module.exports = {
 					},
 				],
 			},
-			backgroundImage: {
-				'blue-gradient': 'linear-gradient(90deg, #45ABFF 0%, #131DE4 100%)',
+			fontFamily: {
+				sf_pro: ['var(--font-sf-pro)', 'system-ui', 'sans-serif'],
+				benzin: ['var(--font-benzin-bold)', 'system-ui', 'sans-serif'],
 			},
 			fontWeight: {
 				w_regular: '400',
@@ -260,6 +261,15 @@ module.exports = {
 					},
 				},
 
+				'.text-blue-gradient': {
+					backgroundImage: 'linear-gradient(101.86deg, #45abff -3.59%, #131de4 158.98%)',
+					'-webkit-background-clip': 'text',
+					'-webkit-text-fill-color': 'transparent',
+				},
+				'.bg-blue-gradient': {
+					backgroundImage: 'linear-gradient(101.86deg, #45abff -3.59%, #131de4 158.98%)',
+				},
+
 				'.spaceForScrollbar': {
 					scrollbarGutter: 'stable',
 				},
@@ -294,9 +304,6 @@ module.exports = {
 				},
 			})
 			addUtilities({
-				'.font-sf-pro': {
-					fontFamily: 'var(--font-sf-pro)',
-				},
 				'.outline-border-none': {
 					outline: 'none',
 					border: 'none',

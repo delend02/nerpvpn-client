@@ -16,9 +16,10 @@ const Logo: FC<LogoProps> = ({ isWhite }) => {
 			<Link href="/">
 				<Image
 					src={isWhite ? '/img/logo/logo-white.svg' : '/img/logo/logo.svg'}
-					alt="NerpVPNLogo"
-					width={160}
-					height={160}
+					className={styles.logo}
+					alt="Nerp VPN"
+					width={220}
+					height={40}
 					priority
 					draggable={false}
 				/>

@@ -4,7 +4,7 @@
 
 @layer base {
 	:root {
-		--header-height-mb: 100px;
+		--header-height-mb: 90px;
 		--header-height: 100px;
 
 		--body-scrollbar-width: 10px;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-	@apply font-sf-pro text-black text-s_text;
+	@apply font-sf_pro text-black text-s_text;
 }
 
 h1 {

@@ -13,3 +13,9 @@ export const sfProDisplay = localFont({
 	variable: '--font-sf-pro',
 	display: 'swap',
 })
+
+export const benzinBold = localFont({
+	src: './BenzinBold/benzin-bold.otf',
+	variable: '--font-benzin-bold',
+	display: 'swap',
+})
