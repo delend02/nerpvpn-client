@@ -20,7 +20,7 @@ html {
 }
 
 body {
-	@apply font-sf_pro text-black text-s_text;
+	@apply font-sf_pro text-black text-s_body;
 }
 
 h1 {

@@ -1,8 +1,17 @@
 .page {
-	@apply container flex flex-col gap-[120px];
+	@apply flex flex-col gap-[120px];
+
+	& .blueButton {
+		@apply flex-center-center gap-4 text-white bg-blue-gradient rounded-full text-s_body py-8 px-12 font-normal;
+	}
+
+	& > .wrapper {
+		@apply container flex flex-col gap-[120px];
+	}
 
 	& .section {
 		@apply flex flex-col gap-[50px] items-center;
+
 		& > .titleWrapper {
 			@apply flex flex-col gap-[30px] items-center;
 
@@ -17,10 +26,14 @@
 		& .title {
 			@apply font-bold font-benzin text-[48px] leading-[116%] text-balance !important;
 		}
+
+		&.blue {
+			@apply bg-blue-gradient mx-2 py-14 tb:py-16 rounded-[50px] text-white;
+		}
 	}
 
 	& .section_1 {
-		@apply rounded-[50px] p-[50px] h-[550px] bg-white
+		@apply rounded-[50px] p-[50px] bg-white
 		flex flex-col justify-between 
 		items-center tb:items-start;
 		background-image: url('/img/phone.webp');
@@ -48,10 +61,6 @@
 				text-balance transition-all2 text-blue-gradient;
 				@apply text-[56px] !important;
 			}
-		}
-
-		& > .button {
-			@apply flex-center-center gap-4 text-white bg-blue-gradient rounded-full text-s_body py-8 px-12 font-normal;
 		}
 	}
 
@@ -117,5 +126,68 @@
 				grid-area: traffic;
 			}
 		}
+	}
+
+	& .section_4 {
+		& > .items {
+			@apply grid grid-cols-2 items-start gap-5;
+
+			& > .left {
+				@apply bg-white rounded-[30px] p-[50px] flex flex-col gap-[50px];
+
+				& > .leftWrapper {
+					@apply flex flex-col gap-5 items-start;
+					& > .leftTitle {
+						@apply font-bold font-benzin text-[36px] leading-[116%] text-balance;
+					}
+				}
+
+				& .leftItem {
+					@apply py-7 flex items-center gap-4 border-b border-black/10;
+
+					& > .leftBadge {
+					}
+
+					& > .leftText {
+						& > .leftLink {
+							@apply underline text-blue-gradient relative;
+
+							&::after {
+								content: '';
+								@apply block absolute left-0 bottom-0 w-full h-[2px] bg-blue-gradient;
+							}
+						}
+					}
+				}
+			}
+
+			& > .right {
+				@apply bg-white bg-blue-gradient rounded-[30px] h-full overflow-hidden relative;
+
+				& > .rightImage {
+					@apply h-full w-full z-1;
+					background-image: url('/img/phone-bg.webp');
+
+					background-repeat: no-repeat;
+					background-position: right 50% top -90px;
+					background-size: 300%;
+				}
+			}
+		}
+	}
+
+	& .section_5 {
+	}
+
+	& .section_6 {
+	}
+
+	& .section_7 {
+	}
+
+	& .section_8 {
+	}
+
+	& .section_9 {
 	}
 }

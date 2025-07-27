@@ -15,9 +15,9 @@ export const ArrowTop = () => (
 		<path
 			d="M19.737 10.1305L10.6064 0.999688M10.6064 0.999688L1.6056 10.0005M10.6064 0.999688L10.6064 22.2129"
 			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
 		/>
 	</svg>
 )
@@ -170,14 +170,14 @@ export const Linux = () => (
 			fill="url(#paint0_linear_87_7435)"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M15.8656 10.0609C15.8751 10.5679 16.1073 11.0002 16.4334 11.1955C15.3695 11.1002 14.0512 11.4891 14.0512 12.2252C14.0348 13.4703 13.3418 15.0195 12.8429 16.1346C12.7447 16.3543 12.654 16.5571 12.5774 16.7374C12.2686 17.5021 12.0833 18.32 12.0614 19.1221C11.2435 17.9947 11.8378 16.5484 12.1582 15.9207C12.5846 15.0947 12.5764 14.9916 12.4108 15.1852C11.7759 16.2648 10.5803 18.4333 12.0775 19.736C12.125 20.3177 12.2667 20.8813 12.5185 21.3994C14.5228 25.4421 18.2761 23.7815 19.5141 21.6853C19.6788 21.3872 19.812 21.0989 19.9177 20.8203C19.9797 20.8593 20.0461 20.8895 20.1167 20.9094C20.739 21.0932 21.6691 20.3922 21.8918 19.9566C22.1604 19.3781 21.8853 18.9833 20.9683 18.5137C20.9215 18.4906 20.8753 18.4688 20.8297 18.4485C21.1814 16.9676 20.2122 15.4276 19.52 14.7743C19.3909 14.7424 19.3727 14.8156 19.5731 15.0155C20.009 15.4333 20.9572 16.9228 20.4442 18.3091C20.3597 18.2864 20.2784 18.2704 20.2009 18.2616C20.0433 17.3158 19.6231 16.58 19.3294 16.0658C19.2629 15.9493 19.2029 15.8442 19.1538 15.7506C19.055 15.5617 18.9368 15.3661 18.8114 15.1587C18.3283 14.3594 17.739 13.3843 17.739 11.9393C17.6651 11.6214 17.3651 11.4094 16.9658 11.2923C17.4293 11.1988 17.7772 10.6573 17.7652 10.0065C17.7521 9.30545 17.3132 8.74737 16.7892 8.76099C16.2652 8.7746 15.846 9.3599 15.8656 10.0609ZM16.2979 10.2174C16.2914 10.6054 16.4748 10.9184 16.7172 10.9184C16.953 10.9184 17.156 10.6054 17.1626 10.2242C17.1691 9.83631 16.9857 9.52324 16.7434 9.52324C16.501 9.52324 16.3045 9.83631 16.2979 10.2174Z"
 			fill="url(#paint1_linear_87_7435)"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M14.5556 11.1498C14.9355 11.1294 15.2106 10.619 15.1779 10.0133C15.1451 9.40754 14.8111 8.93794 14.4311 8.95835C14.0512 8.97877 13.7761 9.48921 13.8089 10.0949C13.8416 10.7006 14.1757 11.1702 14.5556 11.1498ZM14.7848 10.2242C14.8176 10.5441 14.6997 10.8163 14.5294 10.8436C14.3591 10.864 14.1953 10.6258 14.1626 10.3059C14.1298 9.98604 14.2477 9.7138 14.418 9.68658C14.5883 9.66616 14.7521 9.90436 14.7848 10.2242Z"
 			fill="url(#paint2_linear_87_7435)"
 		/>
@@ -210,8 +210,8 @@ export const Linux = () => (
 			fill="url(#paint9_linear_87_7435)"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M9.87664 20.6404C9.51984 21.0307 8.86452 20.9371 8.60152 21.4477C8.43261 21.7756 8.61716 22.2796 8.64206 22.6387C8.67282 23.0824 8.30503 23.711 8.49233 24.0899C8.70268 24.5154 9.65296 24.4602 10.0707 24.5213C11.1019 24.6719 12.8063 26.0065 13.7388 24.9414C14.6504 23.9002 12.8982 22.5825 12.4684 21.6569C12.1889 21.0289 11.7706 19.825 10.992 19.7027C10.4431 19.6175 10.1931 20.2943 9.87664 20.6404ZM11.0583 19.2446C12.0278 19.3967 12.5129 20.6535 12.8707 21.4572C13.4138 22.6227 15.2747 23.8755 14.0686 25.2531C12.9732 26.5043 11.2438 25.1604 10.0086 24.98C9.39166 24.8898 8.41858 24.9546 8.09576 24.3015C7.81821 23.7401 8.2362 23.2316 8.1974 22.672C8.16434 22.1952 7.97565 21.6832 8.2077 21.2306C8.52537 20.5945 9.13864 20.7485 9.55546 20.3192C9.99809 19.8328 10.2634 19.1211 11.0583 19.2446Z"
 			fill="#E68C3F"
 		/>
@@ -220,8 +220,8 @@ export const Linux = () => (
 			fill="url(#paint10_linear_87_7435)"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M21.8097 19.6982C22.0851 19.6909 22.415 19.7102 22.7248 19.9925C23.1101 20.3322 23.1139 20.8867 23.2592 21.351C23.4312 21.9008 24.0341 22.2149 23.998 22.8597C23.9391 23.9136 22.1138 24.1675 21.552 24.8759C21.0121 25.5447 20.3297 25.9429 19.6821 25.9966C18.7 26.078 17.8888 25.2522 17.9462 24.2439C17.9928 23.4276 18.4086 22.6861 18.4593 21.8764C18.4885 21.29 18.52 20.7464 18.626 20.305C18.7331 19.8589 18.9261 19.4748 19.3083 19.257C20.1453 18.7894 20.9539 19.7206 21.8097 19.6982ZM19.5219 19.6637C19.2953 19.7931 19.1512 20.0316 19.0586 20.4171C18.9649 20.8073 18.9341 21.3073 18.9043 21.9046C18.8543 22.7162 18.4377 23.4572 18.3913 24.2713C18.3499 24.9972 18.9075 25.5961 19.6467 25.5348C20.1484 25.4932 20.7272 25.1764 21.2091 24.5797C21.6397 24.0373 23.5137 23.5336 23.5529 22.8328C23.5785 22.3752 22.9765 21.9459 22.8351 21.4943C22.7245 21.1408 22.7187 20.5932 22.4355 20.3449C22.2545 20.1795 22.0641 20.1549 21.8209 20.1613C21.1162 20.1797 20.1761 19.2992 19.5219 19.6637Z"
 			fill="#E68C3F"
 		/>
@@ -246,14 +246,14 @@ export const Linux = () => (
 			fill="url(#paint14_linear_87_7435)"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M13.9933 11.3703C13.8563 11.4764 13.8127 11.6174 13.858 11.7734C13.951 12.0938 14.6216 12.5345 14.8784 12.7501C15.0244 12.8727 15.1914 12.9699 15.4613 12.985C16.0393 13.0239 16.3603 12.5792 16.8667 12.4126C17.1997 12.3038 17.9044 11.8882 17.671 11.4119C17.4718 11.0054 16.8008 10.9803 16.4675 10.7563C15.8939 10.3742 15.4763 10.3769 15.1788 10.4841C14.8528 10.6016 14.2885 11.1416 13.9933 11.3703ZM15.0911 10.2215C15.4781 10.0821 15.9812 10.1021 16.6126 10.5228C17.0276 10.8018 17.659 10.7749 17.9093 11.2858C18.2282 11.9365 17.4555 12.5116 16.947 12.6777C16.4025 12.857 16.0983 13.3061 15.4447 13.2624C15.1058 13.2433 14.8884 13.1158 14.7103 12.9663C14.3408 12.6561 13.7165 12.3613 13.5738 11.8694C13.4946 11.5966 13.6101 11.3204 13.8334 11.1474C14.1943 10.8679 14.682 10.369 15.0911 10.2215Z"
 			fill="#E68C3F"
 		/>
 		<path
-			fill-rule="evenodd"
-			clip-rule="evenodd"
+			fillRule="evenodd"
+			clipRule="evenodd"
 			d="M17.4745 11.5671C17.4772 11.6182 17.4395 11.6619 17.3904 11.6646C16.6971 11.7039 16.2099 12.4951 15.427 12.4951C14.9889 12.4951 14.6421 12.2837 14.3941 12.0804C14.3442 12.0395 13.9033 11.6996 13.9033 11.613C13.9033 11.5618 13.9432 11.5203 13.9925 11.5203C14.0846 11.5203 14.3625 11.8219 14.4659 11.9067C14.6995 12.0982 15.0463 12.3098 15.427 12.3098C16.2021 12.3098 16.6776 11.5195 17.3806 11.4796C17.4298 11.4768 17.4718 11.516 17.4745 11.5671Z"
 			fill="#E68C3F"
 		/>
@@ -270,8 +270,8 @@ export const Linux = () => (
 				y2="9.30598"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.8" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.8" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint1_linear_87_7435"
@@ -281,8 +281,8 @@ export const Linux = () => (
 				y2="17.2716"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="#FFEED7" />
-				<stop offset="1" stop-color="#BDBFC2" />
+				<stop stopColor="#FFEED7" />
+				<stop offset="1" stopColor="#BDBFC2" />
 			</linearGradient>
 			<linearGradient
 				id="paint2_linear_87_7435"
@@ -292,8 +292,8 @@ export const Linux = () => (
 				y2="17.2716"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="#FFEED7" />
-				<stop offset="1" stop-color="#BDBFC2" />
+				<stop stopColor="#FFEED7" />
+				<stop offset="1" stopColor="#BDBFC2" />
 			</linearGradient>
 			<linearGradient
 				id="paint3_linear_87_7435"
@@ -303,8 +303,8 @@ export const Linux = () => (
 				y2="10.3542"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint4_linear_87_7435"
@@ -314,8 +314,8 @@ export const Linux = () => (
 				y2="10.3483"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint5_linear_87_7435"
@@ -325,8 +325,8 @@ export const Linux = () => (
 				y2="19.6272"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.8" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.8" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint6_linear_87_7435"
@@ -336,8 +336,8 @@ export const Linux = () => (
 				y2="14.7138"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint7_linear_87_7435"
@@ -347,8 +347,8 @@ export const Linux = () => (
 				y2="19.9372"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint8_linear_87_7435"
@@ -358,8 +358,8 @@ export const Linux = () => (
 				y2="18.8052"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint9_linear_87_7435"
@@ -369,8 +369,8 @@ export const Linux = () => (
 				y2="25.4214"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="#FFA63F" />
-				<stop offset="1" stop-color="#FFFF00" />
+				<stop stopColor="#FFA63F" />
+				<stop offset="1" stopColor="#FFFF00" />
 			</linearGradient>
 			<linearGradient
 				id="paint10_linear_87_7435"
@@ -380,8 +380,8 @@ export const Linux = () => (
 				y2="24.7801"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="#FFA63F" />
-				<stop offset="1" stop-color="#FFFF00" />
+				<stop stopColor="#FFA63F" />
+				<stop offset="1" stopColor="#FFFF00" />
 			</linearGradient>
 			<linearGradient
 				id="paint11_linear_87_7435"
@@ -391,8 +391,8 @@ export const Linux = () => (
 				y2="22.8605"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint12_linear_87_7435"
@@ -402,8 +402,8 @@ export const Linux = () => (
 				y2="24.3239"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint13_linear_87_7435"
@@ -413,8 +413,8 @@ export const Linux = () => (
 				y2="20.1822"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 			<linearGradient
 				id="paint14_linear_87_7435"
@@ -424,8 +424,8 @@ export const Linux = () => (
 				y2="13.1098"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="#FFA63F" />
-				<stop offset="1" stop-color="#FFFF00" />
+				<stop stopColor="#FFA63F" />
+				<stop offset="1" stopColor="#FFFF00" />
 			</linearGradient>
 			<linearGradient
 				id="paint15_linear_87_7435"
@@ -435,8 +435,8 @@ export const Linux = () => (
 				y2="11.7936"
 				gradientUnits="userSpaceOnUse"
 			>
-				<stop stop-color="white" stop-opacity="0.65" />
-				<stop offset="1" stop-color="white" stop-opacity="0" />
+				<stop stopColor="white" stopOpacity="0.65" />
+				<stop offset="1" stopColor="white" stopOpacity="0" />
 			</linearGradient>
 		</defs>
 	</svg>
