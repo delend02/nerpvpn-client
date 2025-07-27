@@ -64,14 +64,14 @@ module.exports = {
 					},
 				],
 				s_body: [
-					'1rem',
+					'1.125rem',
 					{
 						fontWeight: '500',
 						lineHeight: '120%',
 					},
 				],
 				s_text: [
-					'0.875rem',
+					'1rem',
 					{
 						fontWeight: '500',
 						lineHeight: '120%',

@@ -1,7 +1,12 @@
 export enum UIIconNames {
-	AERO_EXPRESS = 'AeroExpress',
+	ANDROID = 'Android',
 	ARROW_TOP_RIGHT = 'ArrowTopRight',
 	ARROW_TOP = 'ArrowTop',
+	IOS = 'IOS',
+	MAC = 'Mac',
+	WINDOWS = 'Windows',
+	ANDROID_TV = 'AndroidTv',
+	LINUX = 'Linux',
 }
 
 export enum AirLineIconNames {
@@ -37,26 +42,15 @@ export enum AirLineIconNames {
 	DEFAULT = 'Default',
 }
 
-interface PreIconProps {
+export interface IconProps {
+	type: IconNameType
 	/**
 	 *  default 24px
 	 */
 	size?: number
 	className?: string
 	title?: string
+	isCurrentColor?: boolean
 }
 
 export type IconNameType = Lowercase<keyof typeof UIIconNames>
-
-interface UIIconProps extends PreIconProps {
-	type: IconNameType
-	airLineType?: never
-}
-
-export type AirLineIconType = Lowercase<keyof typeof AirLineIconNames>
-interface AirLineIconProps extends PreIconProps {
-	airLineType: AirLineIconType
-	type?: never
-}
-
-export type IconProps = UIIconProps | AirLineIconProps
