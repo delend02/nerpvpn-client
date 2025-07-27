@@ -25,7 +25,9 @@ export const Header: FC<HeaderProps> = ({}) => {
 				<Logo />
 				{!isMobile ? (
 					<>
-						<Navigation />
+						<div className="flex-center-center">
+							<Navigation className={styles.navigation} />
+						</div>
 						<Button className={styles.button}>{tB('buyVpn')}</Button>
 					</>
 				) : (

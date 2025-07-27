@@ -44,7 +44,7 @@ export const Footer: FC = async ({}) => {
 						{tF('tgChanel')}
 					</Link>
 				</div>
-				<div className={clsx(styles.arrow_, 'flex justify-end')}>
+				<div className={clsx(styles.arrow_, 'flex justify-center tb:justify-end')}>
 					<Button className={clsx(styles.buttonUp)}>
 						{tB('up')} <Icon type="arrow_top" size={14} />
 					</Button>

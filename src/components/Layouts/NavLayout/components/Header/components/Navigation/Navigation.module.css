@@ -1,6 +1,5 @@
 .wrapper {
-	/* @apply grid */
-	@apply flex-center-between w-full text-s_body;
+	@apply flex-center-between text-s_body;
 
 	& .white {
 		@apply text-white;

@@ -37,10 +37,13 @@ const NavItem: FC<NavItemProps> = ({ href, title, active, isFooter }) => {
 
 const Navigation: FC<NavigationProps> = ({ isFooter, className }) => {
 	const t = useScopedI18n('nav')
+	const { isTablet } = useDevice()
 
 	return (
 		<div className={clsx(styles.wrapper, className)}>
-			<NavItem isFooter={isFooter} title={t('advantages')} href="#advantages" />
+			{(!isTablet || isFooter) && (
+				<NavItem isFooter={isFooter} title={t('advantages')} href="#advantages" />
+			)}
 			<NavItem isFooter={isFooter} title={t('connect')} href="#connect" />
 			<NavItem isFooter={isFooter} title={t('tariffs')} href="#tariffs" />
 			<NavItem isFooter={isFooter} title={t('reviews')} href="#reviews" />

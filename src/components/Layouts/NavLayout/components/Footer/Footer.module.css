@@ -49,7 +49,7 @@
 		}
 
 		& .buttonUp {
-			@apply text-gray-3 flex-center-center gap-2 bg-transparent;
+			@apply text-gray-3 flex-center-center gap-2 bg-transparent items-center;
 		}
 
 		& .button {
