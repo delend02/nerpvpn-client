@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Logo from '@/components/Layouts/NavLayout/components/Header/components/Logo/Logo'
 
 import { Badge } from '@/ui/Badge/Badge'
@@ -117,6 +119,7 @@ export default async function Page() {
 					</div>
 					<div className={styles.right}>
 						<div className={styles.rightPhone}>
+							<Image src="/img/phone-bg.webp" width={440} height={900} alt="" />
 							<div className={styles.rightContent} />
 						</div>
 					</div>

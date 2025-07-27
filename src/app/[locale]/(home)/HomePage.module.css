@@ -158,20 +158,35 @@
 			}
 
 			& > .right {
-				@apply bg-white bg-blue-gradient rounded-[30px] h-full overflow-hidden relative flex items-center flex-col-reverse;
+				@apply bg-white bg-blue-gradient rounded-[30px] h-full max-h-[660px] overflow-hidden relative flex items-center flex-col pt-[60px];
+
+				&::before {
+					content: '';
+					/* @apply block absolute 
+							left-[50%] translate-x-[-50%] 
+							top-2 
+							w-[130px] h-[36px] 
+							rounded-full bg-[black]; */
+
+					@apply block absolute h-full w-full left-0 bottom-0;
+
+					background-image: url('/img/nerp-bg.webp');
+					background-repeat: no-repeat;
+					background-position: center bottom;
+					background-size: 125%;
+				}
 
 				& > .rightPhone {
-					@apply h-full w-full z-1 overflow-hidden px-[70px] pt-[80px];
-					background-image: url('/img/phone-bg.webp');
-					background-repeat: no-repeat;
-					background-position: center bottom -258px;
-					background-size: 80%;
-
+					@apply relative;
 					& > .rightContent {
-						@apply h-full w-full z-1 rounded-t-[56px] relative;
+						@apply block absolute top-0 left-0 
+						w-[calc(100%-36px)] translate-x-[18px]
+						h-[calc(100%-30px)] translate-y-[15px]
+						rounded-[60px];
+
 						background-image: url('/img/phone-content.gif');
 						background-repeat: no-repeat;
-						background-position: center center;
+						background-position: center top;
 						background-size: 100%;
 
 						&::before {
@@ -180,7 +195,7 @@
 							left-[50%] translate-x-[-50%] 
 							top-2 
 							w-[130px] h-[36px] 
-							rounded-full bg-black;
+							rounded-full bg-[black];
 						}
 
 						&::after {
