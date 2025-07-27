@@ -1,11 +1,83 @@
 .wrapper {
-	@apply bg-black text-white min-h-[240px];
+	@apply bg-black;
 
-	& .logoWithRights {
-		@apply flex-center-center flex-col;
+	& .content {
+		@apply container py-11 items-center text-white;
 
-		& .textRight {
-			@apply text-gray-3 text-s_body font-light;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'logo nav nav button'
+			'info info info arrow';
+
+		@media (768px <= width < 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+
+			grid-template-areas:
+				'logo logo arrow'
+				'nav nav nav'
+				'button button button'
+				'info info info';
 		}
+		@media (width < 768px) {
+			@apply gap-10;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(5, auto);
+
+			grid-template-areas:
+				'logo'
+				'nav'
+				'button'
+				'info'
+				'arrow';
+		}
+
+		& .navigation {
+			@apply flex flex-col gap-4 tb:flex-row;
+		}
+
+		& .logoWithRights {
+			@apply flex items-center tb:items-start gap-2 flex-col;
+
+			& .textRight {
+				@apply text-gray-3 text-s_caption font-light;
+				font-size: 12.5px;
+			}
+		}
+
+		& .buttonUp {
+			@apply text-gray-3 flex-center-center gap-2 bg-transparent;
+		}
+
+		& .button {
+			@apply bg-blue-gradient w-full ds:w-fit text-white px-10 py-6 rounded-full text-s_body;
+		}
+
+		& .linkInfo {
+			@apply flex-center-between gap-4 flex-wrap;
+
+			& .link {
+				@apply text-gray-3 text-wrap max-w-full underline font-w_regular;
+			}
+		}
+	}
+
+	& .logo_ {
+		grid-area: logo;
+	}
+	& .nav_ {
+		grid-area: nav;
+	}
+	& .button_ {
+		grid-area: button;
+	}
+	& .info_ {
+		grid-area: info;
+	}
+	& .arrow_ {
+		grid-area: arrow;
 	}
 }

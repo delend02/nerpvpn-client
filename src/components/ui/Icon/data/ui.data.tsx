@@ -23,3 +23,15 @@ export const ArrowTopRight = () => (
 		/>
 	</svg>
 )
+
+export const ArrowTop = () => (
+	<svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24" fill="none">
+		<path
+			d="M19.737 10.1305L10.6064 0.999688M10.6064 0.999688L1.6056 10.0005M10.6064 0.999688L10.6064 22.2129"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		/>
+	</svg>
+)

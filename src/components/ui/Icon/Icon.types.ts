@@ -1,6 +1,7 @@
 export enum UIIconNames {
 	AERO_EXPRESS = 'AeroExpress',
 	ARROW_TOP_RIGHT = 'ArrowTopRight',
+	ARROW_TOP = 'ArrowTop',
 }
 
 export enum AirLineIconNames {

@@ -1,3 +1,8 @@
 .wrapper {
-	@apply flex text-s_body tb:gap-4 ds:gap-6;
+	/* @apply grid */
+	@apply flex-center-between w-full text-s_body;
+
+	& .white {
+		@apply text-white;
+	}
 }
