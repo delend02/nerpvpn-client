@@ -32,7 +32,7 @@
 		@apply rounded-[50px] p-[50px] bg-white
 		flex flex-col justify-between 
 		items-center tb:items-start;
-		background-image: url('/img/phone.webp');
+		background-image: url('/img/phone-main.webp');
 		background-repeat: no-repeat;
 		background-position: right 50px top 50px;
 		background-size: 47%;
@@ -158,15 +158,40 @@
 			}
 
 			& > .right {
-				@apply bg-white bg-blue-gradient rounded-[30px] h-full overflow-hidden relative;
+				@apply bg-white bg-blue-gradient rounded-[30px] h-full overflow-hidden relative flex items-center flex-col-reverse;
 
-				& > .rightImage {
-					@apply h-full w-full z-1;
+				& > .rightPhone {
+					@apply h-full w-full z-1 overflow-hidden px-[70px] pt-[80px];
 					background-image: url('/img/phone-bg.webp');
-
 					background-repeat: no-repeat;
-					background-position: right 50% top -90px;
-					background-size: 300%;
+					background-position: center bottom -258px;
+					background-size: 80%;
+
+					& > .rightContent {
+						@apply h-full w-full z-1 rounded-t-[56px] relative;
+						background-image: url('/img/phone-content.gif');
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: 100%;
+
+						&::before {
+							content: '';
+							@apply block absolute 
+							left-[50%] translate-x-[-50%] 
+							top-2 
+							w-[130px] h-[36px] 
+							rounded-full bg-black;
+						}
+
+						&::after {
+							content: '';
+							@apply block absolute 
+							left-[50%] translate-x-[38px] 
+							top-2 translate-y-[50%]
+							w-[18px] h-[18px] 
+							rounded-full bg-[#202020];
+						}
+					}
 				}
 			}
 		}

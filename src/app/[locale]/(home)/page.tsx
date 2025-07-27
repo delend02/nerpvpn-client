@@ -116,7 +116,9 @@ export default async function Page() {
 						</Button>
 					</div>
 					<div className={styles.right}>
-						<div className={styles.rightImage}>123</div>
+						<div className={styles.rightPhone}>
+							<div className={styles.rightContent} />
+						</div>
 					</div>
 				</div>
 			</section>
