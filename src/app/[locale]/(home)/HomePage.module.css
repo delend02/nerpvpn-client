@@ -62,4 +62,60 @@
 			@apply grid grid-cols-3 ds:grid-cols-6 gap-3;
 		}
 	}
+
+	& .section_3 {
+		& > .advantagesContainer {
+			@apply w-full gap-2 ds:gap-3;
+
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-auto-flow: row;
+			grid-template-areas:
+				'safeNetwork safeNetwork maximumSpeed'
+				'youtube4k ease traffic';
+
+			& > .advantageContent {
+				@apply flex flex-col justify-between gap-6 bg-white rounded-3xl px-5 py-6 tb:p-8;
+
+				& > .advantageTitle {
+					@apply flex-center-between items-start text-s_h3;
+
+					& > .advantageIcon {
+						@apply text-[45px];
+					}
+				}
+
+				& > .advantageSubtitle {
+					@apply pr-12 text-balance;
+				}
+			}
+
+			@media (width < 1024px) {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					'safeNetwork'
+					'maximumSpeed'
+					'youtube4k'
+					'ease'
+					'traffic';
+			}
+
+			& > .safeNetwork {
+				grid-area: safeNetwork;
+			}
+			& > .maximumSpeed {
+				grid-area: maximumSpeed;
+			}
+			& > .youtube4k {
+				grid-area: youtube4k;
+			}
+			& > .ease {
+				grid-area: ease;
+			}
+			& > .traffic {
+				grid-area: traffic;
+			}
+		}
+	}
 }

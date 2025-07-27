@@ -4,19 +4,22 @@ import Image from 'next/image'
 
 import { Link } from '@/ui/Link/Link'
 
+import { clsx } from '@/utils/clsx'
+
 import styles from './Logo.module.css'
 
 interface LogoProps {
 	isWhite?: boolean
+	className?: string
 }
 
-const Logo: FC<LogoProps> = ({ isWhite }) => {
+const Logo: FC<LogoProps> = ({ isWhite, className }) => {
 	return (
-		<div className={styles.wrapper}>
+		<div className={clsx(styles.wrapper)}>
 			<Link href="/">
 				<Image
 					src={isWhite ? '/img/logo/logo-white.svg' : '/img/logo/logo.svg'}
-					className={styles.logo}
+					className={clsx(styles.logo, className)}
 					alt="Nerp VPN"
 					width={220}
 					height={40}
