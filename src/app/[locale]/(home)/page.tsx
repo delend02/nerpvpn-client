@@ -1,3 +1,4 @@
+import { DE, FI, FR, NL, RU, US } from 'country-flag-icons/react/3x2'
 import Image from 'next/image'
 
 import Logo from '@/components/Layouts/NavLayout/components/Header/components/Logo/Logo'
@@ -23,6 +24,7 @@ const advantages = [
 
 export default async function Page() {
 	const tH = await getScopedI18n('pages.home')
+	const tB = await getScopedI18n('ui.button')
 
 	return (
 		<div className={styles.page}>
@@ -41,7 +43,7 @@ export default async function Page() {
 			<section className={clsx(styles.section, styles.section_2)}>
 				<div className={styles.titleWrapper}>
 					<h2 className={styles.title}>Работает на всех устройствах</h2>
-					<div>Подходит для любых задач — от работы до развлечений</div>
+					<div className={styles.subtitle}>Подходит для любых задач — от работы до развлечений</div>
 				</div>
 
 				<div className={styles.badges}>
@@ -58,7 +60,7 @@ export default async function Page() {
 
 			<section className={clsx(styles.section, styles.section_3)}>
 				<h2 className={clsx(styles.title, 'flex tb:flex-row flex-col tb:items-end gap-5')}>
-					{tH('section_3.title')} <Logo className="!w-[240px]" />
+					{tH('section_3.title')} <Logo className="!w-[200px] tb:!w-[300px] ds:!w-[400px]" />
 				</h2>
 				<div className={styles.advantagesContainer}>
 					{advantages.map(({ key, icon }) => (
@@ -102,7 +104,7 @@ export default async function Page() {
 							</div>
 
 							<div className={styles.leftItem}>
-								<div className={styles.leftBadge}>Шаг 3</div>
+								<div className={styles.leftBadge}>yle 3</div>
 								<div className={styles.leftText}>Зайдите в личный кабинет</div>
 							</div>
 
@@ -132,12 +134,40 @@ export default async function Page() {
 
 			<section className={clsx(styles.section, styles.section_6)}>
 				<div className={styles.titleWrapper}>
-					<h2 className={styles.title}>Доступные локации</h2>
-					<div>
-						Выбирайте сервер из нашего списка и наслаждайтесь стабильным, быстрым и надёжным
-						интернет-соединением с максимальным комфортом.
-					</div>
+					<h2 className={styles.title}>{tH('section_6.title')}</h2>
+					<div className={styles.subtitle}>{tH('section_6.subtitle')}</div>
 				</div>
+
+				<div className={styles.badges}>
+					<Badge className={styles.badge}>
+						<US className={styles.flag} title="us" />
+						{tH('section_6.country.us')}
+					</Badge>
+					<Badge className={styles.badge}>
+						<DE className={styles.flag} title="de" />
+						{tH('section_6.country.de')}
+					</Badge>
+					<Badge className={styles.badge}>
+						<FR className={styles.flag} title="fr" />
+						{tH('section_6.country.fr')}
+					</Badge>
+					<Badge className={styles.badge}>
+						<NL className={styles.flag} title="nl" />
+						{tH('section_6.country.nl')}
+					</Badge>
+					<Badge className={styles.badge}>
+						<FI className={styles.flag} title="fi" />
+						{tH('section_6.country.fi')}
+					</Badge>
+					<Badge className={styles.badge}>
+						<RU className={styles.flag} title="ru" />
+						{tH('section_6.country.ru')}
+					</Badge>
+				</div>
+
+				<Button className={styles.blueButton}>
+					{tB('connectVpn')} <Icon type="arrow_top_right" size={12} />
+				</Button>
 			</section>
 
 			<section className={clsx(styles.section, styles.section_7)}>

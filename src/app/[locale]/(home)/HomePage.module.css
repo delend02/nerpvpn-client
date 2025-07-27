@@ -8,6 +8,10 @@
 	& .section {
 		@apply flex flex-col gap-[50px] items-center;
 
+		& > .badges {
+			@apply flex-center-center flex-wrap tb:grid tb:grid-cols-3 ds:grid-cols-6 gap-3;
+		}
+
 		& > .titleWrapper {
 			@apply flex flex-col gap-[30px] items-center;
 
@@ -16,11 +20,11 @@
 			}
 
 			& > .subtitle {
-				@apply text-[24px] text-balance;
+				@apply text-[24px] text-balance text-center;
 			}
 		}
 		& .title {
-			@apply font-bold font-benzin text-[48px] leading-[116%] text-balance !important;
+			@apply font-bold font-benzin text-[28px] tb:text-[38px] ds:text-[48px] leading-[116%] text-balance !important;
 		}
 
 		&.blue {
@@ -49,23 +53,19 @@
 			@apply text-s_h1 font-normal 
 			tb:w-[60%]
 			text-balance;
-			@apply text-[56px] !important;
+			@apply text-[30px]  tb:text-[46px] ds:text-[56px] !important;
 			letter-spacing: 1px;
 
 			& > span {
 				@apply text-s_h1 font-bold
 				text-balance transition-all2 text-blue-gradient;
-				@apply text-[56px] !important;
+				@apply text-[30px] tb:text-[46px] ds:text-[56px] !important;
 			}
 		}
 	}
 
 	& .section_2 {
 		@apply flex flex-col gap-[50px] items-center;
-
-		& > .badges {
-			@apply grid grid-cols-3 ds:grid-cols-6 gap-3;
-		}
 	}
 
 	& .section_3 {
@@ -216,6 +216,17 @@
 	}
 
 	& .section_6 {
+		@apply flex flex-col gap-[50px] items-center;
+
+		& > .badges {
+			& > .badge {
+				@apply flex gap-2;
+
+				& > .flag {
+					@apply size-7 rounded-full;
+				}
+			}
+		}
 	}
 
 	& .section_7 {
