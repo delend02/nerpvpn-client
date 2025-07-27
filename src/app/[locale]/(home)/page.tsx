@@ -11,7 +11,7 @@ export default async function Page() {
 		<div className={styles.page}>
 			<section className={clsx(styles.section, styles.section_1)}>
 				<h1 className={styles.title}>
-					Ваш лучший выбор свободного интернета —
+					Ваш лучший выбор свободного интернета —
 					<span>NerpVPN</span>
 				</h1>
 
@@ -41,6 +41,9 @@ export default async function Page() {
 
 			<section className={clsx(styles.section, styles.section_3)}>
 				<h2>Преимущества</h2>
+			</section>
+			<section className={clsx(styles.section, styles.section_4)}>
+				<h2>Как подключиться</h2>
 			</section>
 		</div>
 	)
