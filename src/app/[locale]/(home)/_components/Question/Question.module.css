@@ -1,0 +1,7 @@
+.title {
+	@apply text-s_text tb:text-s_h5 ds:text-s_h4 !font-bold;
+}
+
+.content {
+	@apply text-s_text tb:text-s_body font-normal;
+}

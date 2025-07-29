@@ -28,12 +28,24 @@ const NavItem: FC<NavItemProps> = ({ href, title, active, isFooter }) => {
 	return (
 		<Link
 			href={href}
+			onClick={(e) => handleClick(e, href)}
 			className={clsx(styles.link, { [styles.active]: active, [styles.white]: isFooter })}
 		>
 			{title}
 		</Link>
 	)
 }
+
+export const handleClick = (e: React.MouseEvent, href: string) => {
+	e.preventDefault()
+	const id = href.replace('#', '')
+	const el = document.getElementById(id)
+	if (el) {
+		const y = el.getBoundingClientRect().top + window.pageYOffset - 120
+		window.scrollTo({ top: y, behavior: 'smooth' })
+	}
+}
+
 
 const Navigation: FC<NavigationProps> = ({ isFooter, className }) => {
 	const t = useScopedI18n('nav')

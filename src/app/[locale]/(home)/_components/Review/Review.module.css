@@ -1,0 +1,12 @@
+.slide {
+	@apply bg-white flex flex-col justify-between rounded-3xl gap-5 p-8
+  h-[416px] w-full;
+
+	& .name {
+		@apply text-s_h4 font-semibold;
+	}
+
+	& .text {
+		@apply h-full text-wrap overflow-x-auto;
+	}
+}
