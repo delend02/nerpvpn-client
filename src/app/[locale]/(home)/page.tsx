@@ -43,7 +43,7 @@ export default async function Page() {
 					<span>{tH('section_1.titleSpan')}</span>
 				</h1>
 
-				<Button className={styles.blueButton}>
+				<Button className={clsx(styles.button, styles.blueButton)}>
 					{tB('tryTrial')}
 					<Icon type="arrow_top_right" size={12} />
 				</Button>
@@ -116,8 +116,8 @@ export default async function Page() {
 				<div className={styles.items}>
 					<div className={styles.left}>
 						<div className={styles.leftWrapper}>
-							<div className={styles.leftTitle}>{tH('section_4.titleInstructions')}</div>
-							<span>{tH('section_4.subtitleInstructions')}</span>
+							<div className={styles.title}>{tH('section_4.titleInstructions')}</div>
+							<span className={styles.subtitle}>{tH('section_4.subtitleInstructions')}</span>
 						</div>
 
 						<div>
@@ -147,7 +147,7 @@ export default async function Page() {
 							</div>
 						</div>
 
-						<Button className={styles.blueButton}>
+						<Button className={clsx(styles.button, styles.blueButton)}>
 							{tB('tryTrial')}
 							<Icon type="arrow_top_right" size={12} />
 						</Button>
@@ -193,7 +193,7 @@ export default async function Page() {
 									<span className={styles.price}>{price}/</span>{' '}
 									<span className={styles.pricePerDay}>{pricePerDay}</span>
 								</div>
-								<Button className={styles.blueButton}>
+								<Button className={clsx(styles.button, styles.blueButton)}>
 									{tB('buyVpn')} <Icon type="arrow_top_right" size={12} />
 								</Button>
 							</div>
@@ -235,16 +235,16 @@ export default async function Page() {
 					</Badge>
 				</div>
 
-				<Button className={styles.blueButton}>
+				<Button className={clsx(styles.button, styles.blueButton)}>
 					{tB('connectVpn')} <Icon type="arrow_top_right" size={12} />
 				</Button>
 			</section>
 
-			<section id="reviews" className={clsx(styles.section, styles.section_7)}>
+			{/* <section id="reviews" className={clsx(styles.section, styles.section_7)}>
 				<h2 className={styles.title}>{tH('section_7.title')}</h2>
 				<Review />
 				<div className={styles.review}></div>
-			</section>
+			</section> */}
 
 			<section className={clsx(styles.section, styles.blue, styles.section_8)}>
 				<div className={styles.titleWrapper}>
@@ -252,7 +252,7 @@ export default async function Page() {
 					<div className={styles.subtitle}>{tH('section_8.subtitle')}</div>
 				</div>
 
-				<Button className={styles.whiteButton}>
+				<Button className={clsx(styles.button, styles.whiteButton)}>
 					{tB('tryVpn')} <Icon type="arrow_top_right" size={12} />
 				</Button>
 			</section>

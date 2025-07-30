@@ -2,7 +2,7 @@
 	@apply flex-center-center gap-3;
 
 	& .logo {
-		@apply w-[120px] tb:w-[200px] ds:w-[220px]
+		@apply w-[120px] tb:w-[160px] ds:w-[220px]
 		/* FIXME MAX */
 		/* на мобилках уменьши размер лого для шапки */;
 	}
