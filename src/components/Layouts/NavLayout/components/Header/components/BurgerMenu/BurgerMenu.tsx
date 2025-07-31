@@ -1,7 +1,6 @@
 import { Dispatch, type FC, SetStateAction, useEffect } from 'react'
 
 import { Drawer, DrawerBody, DrawerContent } from '@heroui/react'
-import { usePathname } from 'next/navigation'
 
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
