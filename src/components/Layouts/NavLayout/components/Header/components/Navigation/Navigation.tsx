@@ -2,8 +2,6 @@
 
 import type { FC } from 'react'
 
-import { Link } from '@/ui/Link/Link'
-
 import { clsx } from '@/utils/clsx'
 
 import { useDevice } from '@/config/providers/device'
@@ -14,6 +12,7 @@ import { useScopedI18n } from '@/locales/client'
 
 interface NavigationProps {
 	isFooter?: boolean
+	isBurger?: boolean
 	className?: string
 }
 
@@ -26,39 +25,32 @@ interface NavItemProps {
 
 const NavItem: FC<NavItemProps> = ({ href, title, active, isFooter }) => {
 	return (
-		<Link
+		<a
 			href={href}
-			onClick={(e) => handleClick(e, href)}
+			// onClick={(e) => handleClick(e, href)}
 			className={clsx(styles.link, { [styles.active]: active, [styles.white]: isFooter })}
 		>
 			{title}
-		</Link>
+		</a>
 	)
 }
 
-export const handleClick = (e: React.MouseEvent, href: string) => {
-	e.preventDefault()
-	const id = href.replace('#', '')
-	const el = document.getElementById(id)
-	if (el) {
-		const y = el.getBoundingClientRect().top + window.pageYOffset - 120
-		window.scrollTo({ top: y, behavior: 'smooth' })
-	}
-}
-
-
-const Navigation: FC<NavigationProps> = ({ isFooter, className }) => {
+const Navigation: FC<NavigationProps> = ({ isFooter, className, isBurger }) => {
 	const t = useScopedI18n('nav')
 	const { isTablet } = useDevice()
 
 	return (
-		<div className={clsx(styles.wrapper, className)}>
+		<div className={clsx(styles.wrapper, className, { [styles.burger]: isBurger })}>
 			{(!isTablet || isFooter) && (
 				<NavItem isFooter={isFooter} title={t('advantages')} href="#advantages" />
 			)}
+			{isBurger && <hr className={styles.separator} />}
 			<NavItem isFooter={isFooter} title={t('connect')} href="#connect" />
+			{isBurger && <hr className={styles.separator} />}
 			<NavItem isFooter={isFooter} title={t('tariffs')} href="#tariffs" />
+			{isBurger && <hr className={styles.separator} />}
 			<NavItem isFooter={isFooter} title={t('reviews')} href="#reviews" />
+			{isBurger && <hr className={styles.separator} />}
 			<NavItem isFooter={isFooter} title={t('faq')} href="#faq" />
 		</div>
 	)

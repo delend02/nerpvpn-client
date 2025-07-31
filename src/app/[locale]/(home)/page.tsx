@@ -1,8 +1,6 @@
 import { DE, FI, FR, NL, RU, US } from 'country-flag-icons/react/3x2'
 import Image from 'next/image'
 
-import Logo from '@/components/Layouts/NavLayout/components/Header/components/Logo/Logo'
-
 import { Badge } from '@/ui/Badge/Badge'
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
@@ -14,7 +12,7 @@ import styles from './HomePage.module.css'
 import 'keen-slider/keen-slider.min.css'
 
 import Question from './_components/Question/Question'
-import Review from './_components/Review/Review'
+// import Review from './_components/Review/Review'
 import { getScopedI18n } from '@/locales/server'
 
 const advantages = [
@@ -43,9 +41,11 @@ export default async function Page() {
 					<span>{tH('section_1.titleSpan')}</span>
 				</h1>
 
-				<Button className={clsx(styles.button, styles.blueButton)}>
+				<Button
+					className={clsx(styles.button, styles.blueButton)}
+					endContent={<Icon type="arrow_top_right" size={12} />}
+				>
 					{tB('tryTrial')}
-					<Icon type="arrow_top_right" size={12} />
 				</Button>
 				<div
 					style={{ animationDelay: '1s' }}
@@ -147,9 +147,11 @@ export default async function Page() {
 							</div>
 						</div>
 
-						<Button className={clsx(styles.button, styles.blueButton)}>
-							{tB('tryTrial')}
-							<Icon type="arrow_top_right" size={12} />
+						<Button
+							className={clsx(styles.button, styles.blueButton)}
+							endContent={<Icon type="arrow_top_right" size={12} />}
+						>
+							{tB('connectVpn')}
 						</Button>
 					</div>
 					<div className={styles.right}>
@@ -193,8 +195,11 @@ export default async function Page() {
 									<span className={styles.price}>{price}/</span>{' '}
 									<span className={styles.pricePerDay}>{pricePerDay}</span>
 								</div>
-								<Button className={clsx(styles.button, styles.blueButton)}>
-									{tB('buyVpn')} <Icon type="arrow_top_right" size={12} />
+								<Button
+									className={clsx(styles.button, styles.blueButton)}
+									endContent={<Icon type="arrow_top_right" size={12} />}
+								>
+									{tB('buyVpn')}
 								</Button>
 							</div>
 						)
@@ -235,8 +240,11 @@ export default async function Page() {
 					</Badge>
 				</div>
 
-				<Button className={clsx(styles.button, styles.blueButton)}>
-					{tB('connectVpn')} <Icon type="arrow_top_right" size={12} />
+				<Button
+					className={clsx(styles.button, styles.blueButton)}
+					endContent={<Icon type="arrow_top_right" size={12} />}
+				>
+					{tB('connectVpn')}
 				</Button>
 			</section>
 
@@ -252,8 +260,11 @@ export default async function Page() {
 					<div className={styles.subtitle}>{tH('section_8.subtitle')}</div>
 				</div>
 
-				<Button className={clsx(styles.button, styles.whiteButton)}>
-					{tB('tryVpn')} <Icon type="arrow_top_right" size={12} />
+				<Button
+					className={clsx(styles.button, styles.whiteButton)}
+					endContent={<Icon type="arrow_top_right" size={12} />}
+				>
+					{tB('tryVpn')}
 				</Button>
 			</section>
 

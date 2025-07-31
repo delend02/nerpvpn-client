@@ -14,8 +14,17 @@ export const sfProDisplay = localFont({
 	display: 'swap',
 })
 
-export const benzinBold = localFont({
-	src: './BenzinBold/benzin-bold.otf',
-	variable: '--font-benzin-bold',
+export const unbounded = localFont({
+	src: [
+		{ path: './Unbounded/Unbounded-ExtraLight.ttf', weight: '200', style: 'normal' },
+		{ path: './Unbounded/Unbounded-Light.ttf', weight: '300', style: 'normal' },
+		{ path: './Unbounded/Unbounded-Regular.ttf', weight: '400', style: 'normal' },
+		{ path: './Unbounded/Unbounded-Medium.ttf', weight: '500', style: 'normal' },
+		{ path: './Unbounded/Unbounded-SemiBold.ttf', weight: '600', style: 'normal' },
+		{ path: './Unbounded/Unbounded-Bold.ttf', weight: '700', style: 'normal' },
+		{ path: './Unbounded/Unbounded-ExtraBold.ttf', weight: '800', style: 'normal' },
+		{ path: './Unbounded/Unbounded-Black.ttf', weight: '900', style: 'normal' },
+	],
+	variable: '--font-unbounded',
 	display: 'swap',
 })

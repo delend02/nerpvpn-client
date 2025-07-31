@@ -122,7 +122,7 @@ module.exports = {
 			},
 			fontFamily: {
 				sf_pro: ['var(--font-sf-pro)', 'system-ui', 'sans-serif'],
-				benzin: ['var(--font-benzin-bold)', 'system-ui', 'sans-serif'],
+				unbounded: ['var(--font-unbounded)', 'system-ui', 'sans-serif'],
 			},
 			fontWeight: {
 				w_regular: '400',

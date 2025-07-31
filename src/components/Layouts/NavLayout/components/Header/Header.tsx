@@ -1,8 +1,10 @@
 'use client'
 
-import type { FC } from 'react'
+import { type FC, useState } from 'react'
 
 import { Button } from '@/ui/Button/Button'
+
+import { clsx } from '@/utils/clsx'
 
 import { useDevice } from '@/config/providers/device'
 
@@ -18,10 +20,11 @@ interface HeaderProps {}
 export const Header: FC<HeaderProps> = ({}) => {
 	const tB = useScopedI18n('ui.button')
 	const { isMobile } = useDevice()
+	const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.header}>
+			<div className={clsx(styles.header, { [styles.openBurger]: isOpen && isMobile })}>
 				<Logo />
 				{!isMobile ? (
 					<>
@@ -31,7 +34,7 @@ export const Header: FC<HeaderProps> = ({}) => {
 						<Button className={styles.button}>{tB('buyVpn')}</Button>
 					</>
 				) : (
-					<BurgerMenu />
+					<BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 				)}
 			</div>
 		</div>

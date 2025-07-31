@@ -14,7 +14,7 @@ import { DeviceProvider, DeviceType } from '@/config/providers/device'
 
 import './globals.css'
 
-import { benzinBold, sfProDisplay } from '@/fonts'
+import { sfProDisplay, unbounded } from '@/fonts'
 import { I18nProviderClient } from '@/locales/client'
 import { DEFAULT_LOCALE, LocaleType } from '@/locales/config'
 
@@ -38,7 +38,7 @@ export default async function RootLayout({
 		<html
 			lang={locale}
 			dir={getCurrentDir(locale)}
-			className={clsx(sfProDisplay.variable, benzinBold.variable, 'font-sf_pro antialiased')}
+			className={clsx(sfProDisplay.variable, unbounded.variable, 'font-sf_pro antialiased')}
 		>
 			<body>
 				<Suspense fallback={<Spinner center hFull />}>

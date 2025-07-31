@@ -3,3 +3,26 @@
 		@apply bg-black;
 	}
 }
+
+.drawerBody {
+	@apply mt-[var(--header-height)] pb-10 flex justify-between flex-col;
+
+	& .content {
+		@apply flex flex-col gap-10;
+		& .navigation {
+			@apply flex-col items-start gap-6;
+			& > a {
+				@apply text-s_h3 w-full;
+			}
+		}
+
+		& .button {
+			@apply bg-blue-gradient text-white rounded-full
+			py-7;
+		}
+	}
+
+	& .links {
+		@apply text-gray-3 font-normal text-wrap max-w-full underline  flex flex-wrap gap-4 truncate;
+	}
+}

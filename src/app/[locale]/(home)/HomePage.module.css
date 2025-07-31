@@ -15,13 +15,13 @@
 			@apply text-black bg-white;
 		}
 
-		@media (width < 368) {
+		@media (width < 342) {
 			@apply text-[14px] py-3 px-4;
 		}
 	}
 
 	& .section {
-		@apply flex flex-col gap-[30px] tb:gap-[50px] items-center;
+		@apply flex flex-col gap-[30px] tb:gap-[50px] items-center scroll-mt-[120px];
 
 		& > .badges {
 			@apply flex-center-center flex-wrap 
@@ -41,9 +41,9 @@
 			}
 		}
 		& .title {
-			@apply font-bold font-benzin text-[29px] tb:text-[38px] ds:text-[48px] leading-[116%] text-balance !important;
+			@apply font-bold font-unbounded text-[29px] tb:text-[38px] ds:text-[48px] leading-[116%] text-balance !important;
 
-			@media (width < 368) {
+			@media (width < 342) {
 				@apply text-[20px] !important;
 			}
 		}
@@ -51,7 +51,7 @@
 		& .subtitle {
 			@apply text-[18px] tb:text-[24px];
 
-			@media (width < 368) {
+			@media (width < 342) {
 				@apply text-[16px];
 			}
 		}
@@ -62,9 +62,13 @@
 	}
 
 	& .section_1 {
-		@apply relative rounded-[50px] p-8 tb:p-[50px] bg-white
+		@apply relative rounded-[50px] p-5 tb:p-[50px] bg-white
 		flex flex-col tb:justify-between 
 		items-center tb:items-start text-center tb:text-left;
+
+		& > .title {
+			@apply w-[90%];
+		}
 
 		& > .icon {
 			@apply absolute flex-center-center bg-white size-[100px] rounded-full shadow-2xl;
@@ -120,9 +124,13 @@
 			@apply h-[600px];
 		}
 
-		@media (width < 368px) {
-			@apply h-[580px];
+		@media (width < 420px) {
 			background-size: 70%;
+		}
+
+		@media (width < 342px) {
+			@apply h-[500px];
+			background-size: 80%;
 		}
 
 		& > .title {
@@ -132,7 +140,7 @@
 			@apply text-[30px] tb:text-[46px] ds:text-[56px] !important;
 			letter-spacing: 1px;
 
-			@media (width < 368) {
+			@media (width < 342) {
 				@apply text-[20px] !important;
 			}
 
@@ -141,7 +149,7 @@
 				text-balance transition-all2 text-blue-gradient;
 				@apply text-[30px] tb:text-[46px] ds:text-[56px] !important;
 
-				@media (width < 368) {
+				@media (width < 342) {
 					@apply text-[20px] !important;
 				}
 			}
@@ -149,7 +157,7 @@
 	}
 
 	& .section_2 {
-		@apply flex flex-col gap-[50px] items-center;
+		@apply flex flex-col gap-[40px] tb:gap-[50px] items-center;
 	}
 
 	& .section_3 {
@@ -214,6 +222,10 @@
 	}
 
 	& .section_4 {
+		& > .title {
+			@apply text-center;
+		}
+
 		& > .items {
 			display: grid;
 			grid-auto-columns: 1fr;
@@ -237,7 +249,7 @@
 				& > .leftWrapper {
 					@apply flex flex-col gap-5 items-start;
 					& > .leftTitle {
-						@apply font-bold font-benzin leading-[116%] text-balance;
+						@apply font-bold font-unbounded leading-[116%] text-balance;
 					}
 				}
 
@@ -248,7 +260,7 @@
 						@apply flex-center-between shrink-0 border-1 border-blue-500 px-2 rounded-full text-blue-gradient
 						text-s_text tb:text-s_body;
 
-						@media (width < 368) {
+						@media (width < 342) {
 							@apply text-[14px];
 						}
 					}
@@ -256,7 +268,7 @@
 					& > .leftText {
 						@apply text-s_text tb:text-s_body;
 
-						@media (width < 368) {
+						@media (width < 342) {
 							@apply text-[13px];
 						}
 
@@ -334,7 +346,7 @@
 		}
 
 		& > .tariffs {
-			@apply px-5 tb:px-10 flex-center-center gap-7 tb:gap-5 flex-wrap;
+			@apply px-1 tb:px-10 flex-center-center gap-7 tb:gap-5 flex-wrap;
 
 			& > .tariff {
 				@apply flex flex-col  bg-white text-black rounded-3xl
@@ -342,7 +354,7 @@
 				gap-5 tb:gap-7 
 				p-5 tb:p-8;
 
-				@media (width < 368) {
+				@media (width < 342) {
 					@apply w-[210px];
 				}
 
@@ -354,7 +366,7 @@
 						top-[-20] tb:top-[-30] right-[70] -rotate-6
 						text-s_text tb:text-s_body;
 
-						@media (width < 368) {
+						@media (width < 342) {
 							@apply text-[12px];
 						}
 					}
@@ -366,9 +378,9 @@
 					& > .badge {
 						@apply border shrink-0 border-black 
 						p-1 px-2 tb:p-2 
-						tb:text-s_text ds:text-s_body;
+						text-s_caption tb:text-s_text ds:text-s_body;
 
-						@media (width < 368) {
+						@media (width < 342) {
 							@apply text-[12px];
 						}
 					}
@@ -376,7 +388,7 @@
 					& > .economy {
 						@apply text-s_caption tb:text-s_text;
 
-						@media (width < 368) {
+						@media (width < 342) {
 							@apply text-[12px];
 						}
 					}
@@ -385,7 +397,7 @@
 				& div > .price {
 					@apply text-s_h4 tb:text-s_h3 ds:text-s_h2;
 
-					@media (width < 368) {
+					@media (width < 342) {
 						@apply text-[20px];
 					}
 				}
@@ -393,15 +405,15 @@
 				& div > .pricePerDay {
 					@apply text-gray-3 text-s_body tb:text-s_h5 ds:text-s_h4;
 
-					@media (width < 368) {
+					@media (width < 342) {
 						@apply text-[14px];
 					}
 				}
 
 				& > .tariffName {
-					@apply font-benzin text-s_h4 tb:text-s_h3 ds:text-s_h2;
+					@apply font-unbounded text-s_h4 tb:text-s_h3 ds:text-s_h2;
 
-					@media (width < 368) {
+					@media (width < 342) {
 						@apply text-[18px];
 					}
 				}
@@ -435,7 +447,7 @@
 	}
 
 	& .section_8 {
-		@apply relative px-4 py-10 text-center overflow-hidden;
+		@apply relative tb:px-4 py-10 text-center overflow-hidden;
 
 		& > .whiteButton {
 			@apply px-11 py-7 tb:px-28 tb:py-9;

@@ -2,7 +2,6 @@ import type { FC } from 'react'
 
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
-import { Link } from '@/ui/Link/Link'
 
 import { clsx } from '@/utils/clsx'
 
@@ -11,6 +10,7 @@ import styles from './Footer.module.css'
 import Logo from '../Header/components/Logo/Logo'
 import Navigation from '../Header/components/Navigation/Navigation'
 
+import FooterLinks from './component/FooterLinks'
 import { getScopedI18n } from '@/locales/server'
 
 export const Footer: FC = async ({}) => {
@@ -30,23 +30,10 @@ export const Footer: FC = async ({}) => {
 				<div className={clsx(styles.button_, 'flex justify-end')}>
 					<Button className={clsx(styles.button)}>{tB('buyVpn')}</Button>
 				</div>
-				<div className={clsx(styles.linkInfo, styles.info_)}>
-					<Link className={styles.link} href={'/'}>
-						{tF('policyData')}
-					</Link>
-					<Link className={styles.link} href={'/'}>
-						{tF('policyPrivacy')}
-					</Link>
-					<Link className={styles.link} href={'/'}>
-						{tF('supports')}
-					</Link>
-					<Link className={styles.link} href={'/'}>
-						{tF('tgChanel')}
-					</Link>
-				</div>
+				<FooterLinks className={styles.info_} />
 				<div className={clsx(styles.arrow_, 'flex justify-center tb:justify-end')}>
-					<Button className={clsx(styles.buttonUp)}>
-						{tB('up')} <Icon type="arrow_top" size={14} />
+					<Button className={styles.buttonUp} endContent={<Icon type="arrow_top" size={14} />}>
+						<a href="#">{tB('up')}</a>
 					</Button>
 				</div>
 			</div>

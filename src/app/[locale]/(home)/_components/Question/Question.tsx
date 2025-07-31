@@ -36,7 +36,7 @@ const Question: FC<QuestionProps> = () => {
 					key={key}
 					aria-label={`Accordion ${key}`}
 					classNames={{
-						base: '!shadow-none p-4 px-8',
+						base: '!shadow-none tb:p-4 tb:px-8',
 					}}
 					title={<span className={styles.title}>{title}</span>}
 					indicator={({ isOpen }) =>

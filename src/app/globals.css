@@ -13,7 +13,7 @@
 }
 
 html {
-	/* @apply scroll-smooth; */
+	@apply scroll-smooth;
 	@media not (pointer: coarse) {
 		@apply spaceForScrollbar;
 	}

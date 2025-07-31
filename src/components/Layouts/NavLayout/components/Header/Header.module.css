@@ -2,8 +2,12 @@
 	@apply container sticky top-0 z-50;
 
 	& .header {
-		@apply flex-center-between items-center rounded-3xl gap-5 tb:grid grid-cols-[auto_1fr_auto] text-s_body bg-white mt-3 px-5 shadow-xl
-		h-[var(--header-height-mb)] tb:h-[var(--header-height)];
+		@apply relative flex-center-between items-center rounded-3xl gap-5 tb:grid grid-cols-[auto_1fr_auto]
+	text-s_body bg-white mt-3 px-5 shadow-xl h-[var(--header-height-mb)] tb:h-[var(--header-height)] transition-all;
+
+		&.openBurger {
+			@apply shadow-none;
+		}
 
 		& .navigation {
 			@apply w-full max-w-[500px] gap-3;
