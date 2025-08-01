@@ -8,7 +8,7 @@ import {
 	ButtonGroupProps as HeroUIButtonGroupProps,
 	ButtonProps as HeroUIButtonProps,
 } from '@heroui/button'
-import { Spinner } from '@heroui/react'
+import { Link, Spinner } from '@heroui/react'
 
 interface ButtonProps
 	extends Pick<
@@ -27,14 +27,18 @@ interface ButtonProps
 		| 'aria-label'
 		| 'title'
 		| 'children'
+		| 'href'
 	> {
 	onClick?: MouseEventHandler<HTMLButtonElement> | undefined
+	isExternal?: boolean
 }
 
-export const Button: FC<ButtonProps> = ({ onClick, ...props }) => {
+export const Button: FC<ButtonProps> = ({ onClick, isExternal, ...props }) => {
 	return (
 		<HeroUIButton
 			{...props}
+			as={!!props.href ? Link : undefined}
+			isExternal={isExternal}
 			type={!!onClick ? 'button' : 'submit'}
 			onPress={onClick as any}
 			spinner={props.isLoading ? <Spinner /> : undefined}

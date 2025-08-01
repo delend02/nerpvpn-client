@@ -4,6 +4,7 @@ import { Drawer, DrawerBody, DrawerContent } from '@heroui/react'
 
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
+import Language from '@/ui/Language/Language'
 
 import styles from './BurgerMenu.module.css'
 
@@ -22,6 +23,11 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ isOpen, setIsOpen }) => {
 	const tB = useScopedI18n('ui.button')
 
 	useEffect(() => {
+		return () => setIsOpen(false)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
+
+	useEffect(() => {
 		const handleHashChange = () => {
 			if (isOpen) {
 				setIsOpen(false)
@@ -38,7 +44,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ isOpen, setIsOpen }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<Button isIconOnly className={styles.button} onClick={() => setIsOpen((v) => !v)}>
+			<Button isIconOnly className={styles.button} isExternal onClick={() => setIsOpen((v) => !v)}>
 				<BurgerButton isOpen={isOpen} />
 			</Button>
 			<Drawer
@@ -79,7 +85,9 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ isOpen, setIsOpen }) => {
 						<div className={styles.content}>
 							<Navigation className={styles.navigation} isBurger />
 							<Button
+								isExternal
 								className={styles.button}
+								href="https://t.me/nerp_vpn_bot"
 								endContent={<Icon type="arrow_top_right" size={12} />}
 							>
 								{tB('buyVpn')}

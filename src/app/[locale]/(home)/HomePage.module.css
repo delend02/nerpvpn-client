@@ -1,5 +1,5 @@
 .page {
-	@apply container flex flex-col gap-[50px] tb:gap-[100px] ds:gap-[120px];
+	@apply overflow-hidden container flex flex-col gap-[50px] tb:gap-[100px] ds:gap-[120px];
 
 	& .button {
 		@apply flex-center-center gap-2 tb:gap-4 rounded-full font-normal text-wrap
@@ -25,7 +25,7 @@
 
 		& > .badges {
 			@apply flex-center-center flex-wrap 
-			gap-3 tb:gap-5 ds:gap-7
+			gap-2 tb:gap-5 ds:gap-7
 			text-s_text tb:text-s_body;
 		}
 
@@ -57,7 +57,7 @@
 		}
 
 		&.blue {
-			@apply bg-blue-gradient mx-2 py-10 tb:py-16 rounded-[50px] text-white;
+			@apply bg-blue-gradient mx-2 py-5 tb:py-16 rounded-[50px] text-white;
 		}
 	}
 
@@ -72,26 +72,41 @@
 
 		& > .icon {
 			@apply absolute flex-center-center bg-white size-[100px] rounded-full shadow-2xl;
-			animation: wiggle-chaotic 3s infinite ease-in-out;
+			animation: wiggle-chaotic 15s infinite ease-in-out;
 
 			@keyframes wiggle-chaotic {
 				0% {
-					transform: translate(0px, 0px);
+					transform: translateY(0px);
+				}
+				10% {
+					transform: translateY(-30px);
 				}
 				20% {
-					transform: translate(-5px, 10px);
+					transform: translateY(20px);
+				}
+				30% {
+					transform: translateY(-25px);
 				}
 				40% {
-					transform: translate(14px, -6px);
+					transform: translateY(35px);
+				}
+				50% {
+					transform: translateY(-40px);
 				}
 				60% {
-					transform: translate(-13px, -14px);
+					transform: translateY(30px);
+				}
+				70% {
+					transform: translateY(-20px);
 				}
 				80% {
-					transform: translate(16px, 15px);
+					transform: translateY(25px);
+				}
+				90% {
+					transform: translateY(-15px);
 				}
 				100% {
-					transform: translate(0px, 0px);
+					transform: translateY(0px);
 				}
 			}
 		}
@@ -120,8 +135,12 @@
 			}
 		}
 
-		@media (width < 550px) {
+		@media (width < 640px) {
 			@apply h-[600px];
+		}
+
+		@media (width < 490px) {
+			background-size: 60%;
 		}
 
 		@media (width < 420px) {
@@ -157,7 +176,7 @@
 	}
 
 	& .section_2 {
-		@apply flex flex-col gap-[40px] tb:gap-[50px] items-center;
+		@apply flex flex-col gap-[30px] tb:gap-[50px] items-center;
 	}
 
 	& .section_3 {
@@ -242,7 +261,7 @@
 			}
 
 			& > .left {
-				@apply bg-white rounded-[30px] p-[28px] tb:p-[50px] flex flex-col gap-[50px] h-full;
+				@apply bg-white rounded-[30px] p-[20px] tb:p-[50px] flex flex-col gap-[50px] h-full;
 
 				grid-area: left;
 
@@ -346,7 +365,7 @@
 		}
 
 		& > .tariffs {
-			@apply px-1 tb:px-10 flex-center-center gap-7 tb:gap-5 flex-wrap;
+			@apply px-5 tb:px-10 flex-center-center gap-7 tb:gap-5 flex-wrap;
 
 			& > .tariff {
 				@apply flex flex-col  bg-white text-black rounded-3xl
@@ -426,7 +445,7 @@
 	}
 
 	& .section_6 {
-		@apply flex flex-col gap-[50px] items-center;
+		@apply flex flex-col gap-[30px] tb:gap-[50px] items-center;
 
 		& > .blueButton {
 			@apply px-11 py-7 tb:px-28 tb:py-9;
@@ -444,6 +463,9 @@
 	}
 
 	& .section_7 {
+		& > .title {
+			@apply text-center;
+		}
 	}
 
 	& .section_8 {

@@ -8,4 +8,8 @@
 	& .separator {
 		@apply border border-b-1 border-gray-3 w-full;
 	}
+
+	& .black {
+		@apply text-black;
+	}
 }

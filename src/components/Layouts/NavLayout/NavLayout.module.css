@@ -10,7 +10,7 @@
 	}
 
 	& .main {
-		@apply flex flex-col min-h-[100vh] w-full;
+		@apply flex flex-col min-h-[100vh] w-full pb-10 tb:pb-20 ds:pb-24;
 		@supports (height: 100dvh) {
 			@apply min-h-dvh;
 		}

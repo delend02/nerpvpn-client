@@ -8,12 +8,16 @@ import { GB, RU } from 'country-flag-icons/react/3x2'
 import { clsx } from '@/utils/clsx'
 import { getCurrentDir } from '@/utils/isRTL'
 
+import { useDevice } from '@/config/providers/device'
+
 import styles from './Language.module.css'
 
 import { useChangeLocale, useCurrentLocale } from '@/locales/client'
 import { LocaleType, fullLocales } from '@/locales/config'
 
-interface LanguageProps {}
+interface LanguageProps {
+	withoutTitle?: boolean
+}
 
 const FlagIcon: FC<{ locale: LocaleType; className: string }> = ({ locale, className }) => {
 	if (locale === 'en') return <GB title="English" className={className} />
@@ -35,7 +39,7 @@ const ItemLanguage: FC<{ lang: string; title: string; withoutTitle?: boolean }> 
 	)
 }
 
-const Language: FC<LanguageProps> = ({}) => {
+const Language: FC<LanguageProps> = ({ withoutTitle }) => {
 	const currentLocale = useCurrentLocale()
 	const changeLocale = useChangeLocale()
 
@@ -45,11 +49,12 @@ const Language: FC<LanguageProps> = ({}) => {
 
 	return (
 		<Select
-			className={styles.select}
+			className={clsx(styles.select, { ['!w-20']: withoutTitle })}
 			selectedKeys={[currentLocale]}
 			items={fullLocales}
 			renderValue={(items) => (
 				<ItemLanguage
+					withoutTitle={withoutTitle}
 					lang={items[0].data?.key as LocaleType}
 					title={items[0].data?.title as string}
 				/>
@@ -61,7 +66,7 @@ const Language: FC<LanguageProps> = ({}) => {
 					textValue={item.title}
 					onClick={() => changeLocale(item.key as any)}
 				>
-					<ItemLanguage lang={item.key} title={item.title} />
+					<ItemLanguage withoutTitle={withoutTitle} lang={item.key} title={item.title} />
 				</SelectItem>
 			)}
 		</Select>

@@ -12,7 +12,7 @@ import styles from './Review.module.css'
 import 'keen-slider/keen-slider.min.css'
 
 const loremText =
-	'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!'
+	'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!ipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!ipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!ipisicing elit. Incidunt provident sequi ab nostrum, deleniti quam! Tenetur delectus atque, debitis aliquid, eum quas odit ullam aspernatur ducimus cumque sequi deserunt nisi!'
 
 const Review: FC = () => {
 	const reviews = [
@@ -49,12 +49,12 @@ const Review: FC = () => {
 		<div className="w-full mx-auto px-4 ">
 			<div ref={sliderRef} className="keen-slider">
 				{reviews.map((review, index) => (
-					<div key={index} className={clsx(styles.slide, 'keen-slider__slide')}>
+					<div key={index} className={clsx('keen-slider__slide', styles.slide)}>
 						<span className={styles.name}>{review.name}</span>
 						<p className={styles.text}>{review.text}</p>
-						<div>
+						<div className="flex gap-1">
 							{Array.from({ length: review.stars }, (_, i) => (
-								<Icon size={25} key={i} type="star" />
+								<Icon size={20} key={i} type="star" />
 							))}
 						</div>
 					</div>

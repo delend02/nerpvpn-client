@@ -3,6 +3,7 @@
 import { type FC, useState } from 'react'
 
 import { Button } from '@/ui/Button/Button'
+import Language from '@/ui/Language/Language'
 
 import { clsx } from '@/utils/clsx'
 
@@ -20,6 +21,7 @@ interface HeaderProps {}
 export const Header: FC<HeaderProps> = ({}) => {
 	const tB = useScopedI18n('ui.button')
 	const { isMobile } = useDevice()
+
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
@@ -31,10 +33,15 @@ export const Header: FC<HeaderProps> = ({}) => {
 						<div className="flex-center-center">
 							<Navigation className={styles.navigation} />
 						</div>
-						<Button className={styles.button}>{tB('buyVpn')}</Button>
+						<Button href="https://t.me/nerp_vpn_bot" isExternal className={styles.button}>
+							{tB('buyVpn')}
+						</Button>
 					</>
 				) : (
-					<BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+					<div className="flex-center-center gap-3">
+						{false && isOpen && <Language withoutTitle />}
+						<BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+					</div>
 				)}
 			</div>
 		</div>

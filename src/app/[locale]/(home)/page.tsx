@@ -12,7 +12,7 @@ import styles from './HomePage.module.css'
 import 'keen-slider/keen-slider.min.css'
 
 import Question from './_components/Question/Question'
-// import Review from './_components/Review/Review'
+import Review from './_components/Review/Review'
 import { getScopedI18n } from '@/locales/server'
 
 const advantages = [
@@ -43,12 +43,14 @@ export default async function Page() {
 
 				<Button
 					className={clsx(styles.button, styles.blueButton)}
+					isExternal
+					href="https://t.me/nerp_vpn_bot"
 					endContent={<Icon type="arrow_top_right" size={12} />}
 				>
 					{tB('tryTrial')}
 				</Button>
 				<div
-					style={{ animationDelay: '1s' }}
+					style={{ animationDelay: '0.8s' }}
 					className={clsx(styles.icon, 'right-[20%] bottom-[60%]')}
 				>
 					<Icon size={40} type="discord" />
@@ -60,7 +62,7 @@ export default async function Page() {
 					<Icon size={36} type="youtube" />
 				</div>
 				<div
-					style={{ animationDelay: '1.5s' }}
+					style={{ animationDelay: '1.2s' }}
 					className={clsx(styles.icon, 'right-[10%] bottom-[25%]')}
 				>
 					<Icon size={46} type="chatgpt" />
@@ -149,6 +151,8 @@ export default async function Page() {
 
 						<Button
 							className={clsx(styles.button, styles.blueButton)}
+							isExternal
+							href="https://t.me/nerp_vpn_bot"
 							endContent={<Icon type="arrow_top_right" size={12} />}
 						>
 							{tB('connectVpn')}
@@ -197,6 +201,8 @@ export default async function Page() {
 								</div>
 								<Button
 									className={clsx(styles.button, styles.blueButton)}
+									isExternal
+									href="https://t.me/nerp_vpn_bot"
 									endContent={<Icon type="arrow_top_right" size={12} />}
 								>
 									{tB('buyVpn')}
@@ -242,17 +248,19 @@ export default async function Page() {
 
 				<Button
 					className={clsx(styles.button, styles.blueButton)}
+					isExternal
+					href="https://t.me/nerp_vpn_bot"
 					endContent={<Icon type="arrow_top_right" size={12} />}
 				>
 					{tB('connectVpn')}
 				</Button>
 			</section>
 
-			{/* <section id="reviews" className={clsx(styles.section, styles.section_7)}>
+			<section id="reviews" className={clsx(styles.section, styles.section_7)}>
 				<h2 className={styles.title}>{tH('section_7.title')}</h2>
 				<Review />
 				<div className={styles.review}></div>
-			</section> */}
+			</section>
 
 			<section className={clsx(styles.section, styles.blue, styles.section_8)}>
 				<div className={styles.titleWrapper}>
@@ -262,6 +270,8 @@ export default async function Page() {
 
 				<Button
 					className={clsx(styles.button, styles.whiteButton)}
+					isExternal
+					href="https://t.me/nerp_vpn_bot"
 					endContent={<Icon type="arrow_top_right" size={12} />}
 				>
 					{tB('tryVpn')}

@@ -28,12 +28,18 @@ export const Footer: FC = async ({}) => {
 				</div>
 				<Navigation isFooter className={clsx(styles.nav_, styles.navigation)} />
 				<div className={clsx(styles.button_, 'flex justify-end')}>
-					<Button className={clsx(styles.button)}>{tB('buyVpn')}</Button>
+					<Button href="https://t.me/nerp_vpn_bot" isExternal className={clsx(styles.button)}>
+						{tB('buyVpn')}
+					</Button>
 				</div>
 				<FooterLinks className={styles.info_} />
 				<div className={clsx(styles.arrow_, 'flex justify-center tb:justify-end')}>
-					<Button className={styles.buttonUp} endContent={<Icon type="arrow_top" size={14} />}>
-						<a href="#">{tB('up')}</a>
+					<Button
+						href="#"
+						className={styles.buttonUp}
+						endContent={<Icon type="arrow_top" size={14} />}
+					>
+						{tB('up')}
 					</Button>
 				</div>
 			</div>

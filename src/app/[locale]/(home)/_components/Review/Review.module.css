@@ -1,12 +1,16 @@
 .slide {
-	@apply bg-white flex flex-col justify-between rounded-3xl gap-5 p-8
-  h-[400px];
+	@apply bg-white flex flex-col justify-between rounded-3xl 
+	gap-2 tb:gap-3 ds:gap-5
+	p-5 tb:p-8
+  max-h-[300px] tb:max-h-[350px] ds:max-h-[400px];
 
 	& .name {
-		@apply text-s_h4 font-semibold;
+		@apply font-semibold
+		text-s_h5 tb:text-s_h4;
 	}
 
 	& .text {
-		@apply h-full text-wrap overflow-x-auto;
+		@apply h-full text-wrap overflow-x-auto
+		text-s_text tb:text-s_body;
 	}
 }

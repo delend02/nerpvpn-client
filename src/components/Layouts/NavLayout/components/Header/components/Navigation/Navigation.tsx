@@ -2,6 +2,8 @@
 
 import type { FC } from 'react'
 
+import { Link } from '@heroui/react'
+
 import { clsx } from '@/utils/clsx'
 
 import { useDevice } from '@/config/providers/device'
@@ -25,13 +27,16 @@ interface NavItemProps {
 
 const NavItem: FC<NavItemProps> = ({ href, title, active, isFooter }) => {
 	return (
-		<a
+		<Link
 			href={href}
-			// onClick={(e) => handleClick(e, href)}
-			className={clsx(styles.link, { [styles.active]: active, [styles.white]: isFooter })}
+			className={clsx(styles.link, {
+				[styles.active]: active,
+				[styles.white]: isFooter,
+				[styles.black]: !isFooter,
+			})}
 		>
 			{title}
-		</a>
+		</Link>
 	)
 }
 

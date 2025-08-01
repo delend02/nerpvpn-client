@@ -8,37 +8,31 @@ import { Icon } from '@/ui/Icon/Icon'
 
 import styles from './Question.module.css'
 
+import { useScopedI18n } from '@/locales/client'
+
 interface QuestionProps {}
 
-const faqItems = [
-	{
-		key: '1',
-		title: 'Что такое ваш сервис?',
-		content: 'Наш сервис предоставляет безопасное и быстрое подключение к сети через VPN.',
-	},
-	{
-		key: '2',
-		title: 'Как установить приложение?',
-		content: 'Скачайте приложение с сайта, установите и следуйте простым инструкциям.',
-	},
-	{
-		key: '3',
-		title: 'Есть ли бесплатный период?',
-		content: 'Да, у нас есть 7-дневный пробный период с полным функционалом.',
-	},
-]
-
 const Question: FC<QuestionProps> = () => {
+	const t = useScopedI18n('pages.home.section_9.faq')
+
+	const faqItems = [
+		{ key: '1', question: t('0.question'), answer: t('0.answer') },
+		{ key: '2', question: t('1.question'), answer: t('1.answer') },
+		{ key: '3', question: t('2.question'), answer: t('2.answer') },
+		{ key: '4', question: t('3.question'), answer: t('3.answer') },
+		{ key: '5', question: t('4.question'), answer: t('4.answer') },
+		{ key: '6', question: t('5.question'), answer: t('5.answer') },
+		{ key: '7', question: t('6.question'), answer: t('6.answer') },
+	]
+
 	return (
 		<Accordion variant="splitted">
-			{faqItems.map(({ key, title, content }) => (
+			{faqItems.map(({ question, answer }, index) => (
 				<AccordionItem
-					key={key}
-					aria-label={`Accordion ${key}`}
-					classNames={{
-						base: '!shadow-none tb:p-4 tb:px-8',
-					}}
-					title={<span className={styles.title}>{title}</span>}
+					key={index}
+					aria-label={`Accordion ${index}`}
+					classNames={{ base: '!shadow-none tb:p-4 tb:px-8' }}
+					title={<span className={styles.title}>{question}</span>}
 					indicator={({ isOpen }) =>
 						!isOpen ? (
 							<Icon size={20} type="plus" />
@@ -47,7 +41,7 @@ const Question: FC<QuestionProps> = () => {
 						)
 					}
 				>
-					<span className={styles.content}>{content}</span>
+					<span className={styles.content}>{answer}</span>
 				</AccordionItem>
 			))}
 		</Accordion>

@@ -1,5 +1,5 @@
 .select {
-	@apply w-[150px];
+	@apply animate-fade w-[150px];
 }
 
 .itemFlag {

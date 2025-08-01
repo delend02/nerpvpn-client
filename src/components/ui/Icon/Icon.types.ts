@@ -14,6 +14,11 @@ export enum UIIconNames {
 	CHATGPT = 'ChatGPT',
 	YOUTUBE = 'Youtube',
 	DISCORD = 'Discord',
+	NETWORK_IPHONE = 'NetworkIphone',
+	ROCKET_IPHONE = 'RocketIphone',
+	TV_IPHONE = 'TvIphone',
+	BRAIN_IPHONE = 'BrainIphone',
+	INFINITY_IPHONE = 'InfinityIphone',
 }
 
 export interface IconProps {
