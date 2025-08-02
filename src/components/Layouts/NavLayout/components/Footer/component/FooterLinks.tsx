@@ -25,12 +25,12 @@ const FooterLinks: FC<FooterLinksProps> = ({ className }) => {
 			<Link className={styles.link} href={'/'}>
 				{tF('policyPrivacy')}
 			</Link>
-			<Link className={styles.link} href={'/'}>
+			<Link className={styles.link} href={'https://t.me/nerp_vpn_support'} newTab>
 				{tF('supports')}
 			</Link>
-			<Link className={styles.link} href={'/'}>
+			{/* <Link className={styles.link} href={'/'}>
 				{tF('tgChanel')}
-			</Link>
+			</Link> */}
 		</div>
 	)
 }

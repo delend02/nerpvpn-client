@@ -15,7 +15,7 @@
 			@apply text-black bg-white;
 		}
 
-		@media (width < 342) {
+		@media (width < 342px) {
 			@apply text-[14px] py-3 px-4;
 		}
 	}
@@ -43,7 +43,7 @@
 		& .title {
 			@apply font-bold font-unbounded text-[29px] tb:text-[38px] ds:text-[48px] leading-[116%] text-balance !important;
 
-			@media (width < 342) {
+			@media (width < 342px) {
 				@apply text-[20px] !important;
 			}
 		}
@@ -51,7 +51,7 @@
 		& .subtitle {
 			@apply text-[18px] tb:text-[24px];
 
-			@media (width < 342) {
+			@media (width < 342px) {
 				@apply text-[16px];
 			}
 		}
@@ -72,7 +72,7 @@
 
 		& > .icon {
 			@apply absolute flex-center-center bg-white size-[100px] rounded-full shadow-2xl;
-			animation: wiggle-chaotic 15s infinite ease-in-out;
+			animation: wiggle-chaotic 18s infinite ease-in-out;
 
 			@keyframes wiggle-chaotic {
 				0% {
@@ -159,7 +159,7 @@
 			@apply text-[30px] tb:text-[46px] ds:text-[56px] !important;
 			letter-spacing: 1px;
 
-			@media (width < 342) {
+			@media (width < 342px) {
 				@apply text-[20px] !important;
 			}
 
@@ -168,7 +168,7 @@
 				text-balance transition-all2 text-blue-gradient;
 				@apply text-[30px] tb:text-[46px] ds:text-[56px] !important;
 
-				@media (width < 342) {
+				@media (width < 342px) {
 					@apply text-[20px] !important;
 				}
 			}
@@ -279,7 +279,7 @@
 						@apply flex-center-between shrink-0 border-1 border-blue-500 px-2 rounded-full text-blue-gradient
 						text-s_text tb:text-s_body;
 
-						@media (width < 342) {
+						@media (width < 342px) {
 							@apply text-[14px];
 						}
 					}
@@ -287,7 +287,7 @@
 					& > .leftText {
 						@apply text-s_text tb:text-s_body;
 
-						@media (width < 342) {
+						@media (width < 342px) {
 							@apply text-[13px];
 						}
 
@@ -373,7 +373,7 @@
 				gap-5 tb:gap-7 
 				p-5 tb:p-8;
 
-				@media (width < 342) {
+				@media (width < 342px) {
 					@apply w-[210px];
 				}
 
@@ -385,7 +385,7 @@
 						top-[-20px] tb:top-[-30px] right-[70px] -rotate-6
 						text-s_text tb:text-s_body;
 
-						@media (width < 342) {
+						@media (width < 342px) {
 							@apply text-[12px];
 						}
 					}
@@ -399,7 +399,7 @@
 						p-1 px-2 tb:p-2 
 						text-s_caption tb:text-s_text ds:text-s_body;
 
-						@media (width < 342) {
+						@media (width < 342px) {
 							@apply text-[12px];
 						}
 					}
@@ -407,7 +407,7 @@
 					& > .economy {
 						@apply text-s_caption tb:text-s_text;
 
-						@media (width < 342) {
+						@media (width < 342px) {
 							@apply text-[12px];
 						}
 					}
@@ -416,7 +416,7 @@
 				& div > .price {
 					@apply text-s_h4 tb:text-s_h3 ds:text-s_h2;
 
-					@media (width < 342) {
+					@media (width < 342px) {
 						@apply text-[20px];
 					}
 				}
@@ -424,7 +424,7 @@
 				& div > .pricePerDay {
 					@apply text-gray-3 text-s_body tb:text-s_h5 ds:text-s_h4;
 
-					@media (width < 342) {
+					@media (width < 342px) {
 						@apply text-[14px];
 					}
 				}
@@ -432,7 +432,7 @@
 				& > .tariffName {
 					@apply font-unbounded text-s_h4 tb:text-s_h3 ds:text-s_h2;
 
-					@media (width < 342) {
+					@media (width < 342px) {
 						@apply text-[18px];
 					}
 				}

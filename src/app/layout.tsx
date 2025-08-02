@@ -20,7 +20,7 @@ import { DEFAULT_LOCALE, LocaleType } from '@/locales/config'
 
 export const metadata: Metadata = {
 	title: 'Nerp VPN',
-	description: '',
+	// description: '',
 	// keywords: ['nerp vpn', 'nerp vpn app', 'nerp vpn app download', 'nerp vpn download', 'vpn'],
 }
 

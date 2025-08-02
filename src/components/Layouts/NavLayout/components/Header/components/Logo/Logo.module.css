@@ -4,7 +4,7 @@
 	& .logo {
 		@apply w-[200px] tb:w-[210px] ds:w-[220px];
 
-		@media (width < 342) {
+		@media (width < 342px) {
 			@apply w-[150px];
 		}
 	}
