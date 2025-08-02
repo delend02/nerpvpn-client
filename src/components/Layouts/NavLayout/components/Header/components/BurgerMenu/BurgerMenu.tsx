@@ -4,7 +4,6 @@ import { Drawer, DrawerBody, DrawerContent } from '@heroui/react'
 
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
-import Language from '@/ui/Language/Language'
 
 import styles from './BurgerMenu.module.css'
 

@@ -103,7 +103,7 @@
 					transform: translateY(25px);
 				}
 				90% {
-					transform: translateY(-15px);
+					transform: translateY(-30px);
 				}
 				100% {
 					transform: translateY(0px);
@@ -382,7 +382,7 @@
 
 					& > .topBadge {
 						@apply absolute bg-black text-white rounded-xl p-[10px]
-						top-[-20] tb:top-[-30] right-[70] -rotate-6
+						top-[-20px] tb:top-[-30px] right-[70px] -rotate-6
 						text-s_text tb:text-s_body;
 
 						@media (width < 342) {
@@ -490,13 +490,13 @@
 			@media (width < 1024px) {
 				width: 280px;
 				height: 280px;
-				bottom: -20;
+				bottom: -20px;
 			}
 		}
 
 		&::before {
 			background-image: url('/img/nerp-bg.webp');
-			right: 40;
+			right: 40px;
 			transform: scaleX(1);
 			@media (width < 768px) {
 				left: 50%;
@@ -505,7 +505,7 @@
 
 		&::after {
 			background-image: url('/img/nerp-bg.webp');
-			left: 40;
+			left: 40px;
 			transform: scaleX(-1);
 
 			@media (width < 768px) {

@@ -3,7 +3,7 @@
 
 	& .header {
 		@apply relative flex-center-between items-center rounded-3xl gap-5 tb:grid grid-cols-[auto_1fr_auto]
-	text-s_body bg-white mt-3 px-5 shadow-xl h-[var(--header-height-mb)] tb:h-[var(--header-height)] transition-all;
+	text-s_body bg-white  mt-3 px-5 shadow-xl h-[var(--header-height-mb)] tb:h-[var(--header-height)] transition-all;
 
 		&.openBurger {
 			@apply shadow-none;

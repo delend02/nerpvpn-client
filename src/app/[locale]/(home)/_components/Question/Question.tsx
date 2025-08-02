@@ -31,7 +31,11 @@ const Question: FC<QuestionProps> = () => {
 				<AccordionItem
 					key={index}
 					aria-label={`Accordion ${index}`}
-					classNames={{ base: '!shadow-none tb:p-4 tb:px-8' }}
+					classNames={{
+						base: '!shadow-none p-4 tb:p-6 ds:p-7',
+						trigger: 'p-0',
+						content: 'pt-2 tb:pt-4',
+					}}
 					title={<span className={styles.title}>{question}</span>}
 					indicator={({ isOpen }) =>
 						!isOpen ? (

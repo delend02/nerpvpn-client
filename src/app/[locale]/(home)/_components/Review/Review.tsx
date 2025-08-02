@@ -46,7 +46,7 @@ const Review: FC = () => {
 	})
 
 	return (
-		<div className="w-full mx-auto px-4 ">
+		<div className="w-full">
 			<div ref={sliderRef} className="keen-slider">
 				{reviews.map((review, index) => (
 					<div key={index} className={clsx('keen-slider__slide', styles.slide)}>

@@ -1,8 +1,6 @@
-import { ReactNode } from 'react'
-
 import { NavLayout } from '@/components/Layouts/NavLayout/NavLayout'
 
-export default async function Layout(props: { children: ReactNode; modal: ReactNode }) {
+export default async function Layout(props: any) {
 	return (
 		<>
 			{props.modal}

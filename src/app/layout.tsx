@@ -21,7 +21,7 @@ import { DEFAULT_LOCALE, LocaleType } from '@/locales/config'
 export const metadata: Metadata = {
 	title: 'Nerp VPN',
 	description: '',
-	keywords: ['nerp vpn', 'nerp vpn app', 'nerp vpn app download', 'nerp vpn download', 'vpn'],
+	// keywords: ['nerp vpn', 'nerp vpn app', 'nerp vpn app download', 'nerp vpn download', 'vpn'],
 }
 
 export default async function RootLayout({

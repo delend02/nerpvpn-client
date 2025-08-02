@@ -2,6 +2,10 @@
 	@apply flex-center-center gap-3;
 
 	& .logo {
-		@apply w-[150px] tb:w-[150px] ds:w-[220px];
+		@apply w-[200px] tb:w-[210px] ds:w-[220px];
+
+		@media (width < 342) {
+			@apply w-[150px];
+		}
 	}
 }

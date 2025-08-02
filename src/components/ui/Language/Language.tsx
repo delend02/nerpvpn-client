@@ -8,8 +8,6 @@ import { GB, RU } from 'country-flag-icons/react/3x2'
 import { clsx } from '@/utils/clsx'
 import { getCurrentDir } from '@/utils/isRTL'
 
-import { useDevice } from '@/config/providers/device'
-
 import styles from './Language.module.css'
 
 import { useChangeLocale, useCurrentLocale } from '@/locales/client'
